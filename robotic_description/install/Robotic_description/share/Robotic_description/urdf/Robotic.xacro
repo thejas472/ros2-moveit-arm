@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<robot name="Robotic" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find robotic_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find robotic_description)/urdf/Robotic.ros2control" />
+<xacro:include filename="$(find robotic_description)/urdf/Robotic.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.00019608322687622598 4.7129774473542457e-17 0.022210240717664115" rpy="0 0 0"/>
+    <mass value="0.7043648518485409"/>
+    <inertia ixx="0.000939" iyy="0.001008" izz="0.001523" ixy="0.0" iyz="0.0" ixz="3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotic_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotic_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Waist_1">
+  <inertial>
+    <origin xyz="-0.008062536633270424 -0.003156098208856595 0.018639504463720195" rpy="0 0 0"/>
+    <mass value="0.5291365782631562"/>
+    <inertia ixx="0.000474" iyy="0.000362" izz="0.000438" ixy="-3.7e-05" iyz="5.7e-05" ixz="5.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.056" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotic_description)/meshes/Waist_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.056" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotic_description)/meshes/Waist_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Arm_01_1">
+  <inertial>
+    <origin xyz="0.007763833255833127 -0.0016113051176803953 0.05286529428217453" rpy="0 0 0"/>
+    <mass value="0.4764450409317062"/>
+    <inertia ixx="0.000808" iyy="0.000774" izz="7e-05" ixy="-7e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.006743 0.012807 -0.10028" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotic_description)/meshes/Arm_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.006743 0.012807 -0.10028" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotic_description)/meshes/Arm_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Arm_02_1">
+  <inertial>
+    <origin xyz="0.003519458974781594 0.04491397842254759 2.835605953671605e-05" rpy="0 0 0"/>
+    <mass value="0.37930241387052616"/>
+    <inertia ixx="0.000432" iyy="8.6e-05" izz="0.000423" ixy="-7.8e-05" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.006743 0.012807 -0.21303" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotic_description)/meshes/Arm_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.006743 0.012807 -0.21303" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotic_description)/meshes/Arm_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Arm_03_1">
+  <inertial>
+    <origin xyz="0.010867245461587148 0.015859567359099505 0.000375553319919425" rpy="0 0 0"/>
+    <mass value="0.11809308771782144"/>
+    <inertia ixx="3.1e-05" iyy="2e-05" izz="3.1e-05" ixy="-6e-06" iyz="4e-06" ixz="-3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.007126 -0.081084 -0.20773" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotic_description)/meshes/Arm_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.007126 -0.081084 -0.20773" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotic_description)/meshes/Arm_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="base_to_waist_joint" type="continuous">
+  <origin xyz="0.0 0.0 0.056" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Waist_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="shoulder_joint" type="revolute">
+  <origin xyz="-0.006743 -0.012807 0.04428" rpy="0 0 0"/>
+  <parent link="Waist_1"/>
+  <child link="Arm_01_1"/>
+  <axis xyz="-0.979133 0.203218 0.0"/>
+  <limit upper="1.832596" lower="-1.832596" effort="100" velocity="100"/>
+</joint>
+
+<joint name="elbow_joint" type="revolute">
+  <origin xyz="0.0 0.0 0.11275" rpy="0 0 0"/>
+  <parent link="Arm_01_1"/>
+  <child link="Arm_02_1"/>
+  <axis xyz="0.979133 -0.203218 -0.0"/>
+  <limit upper="0.0" lower="-1.745329" effort="100" velocity="100"/>
+</joint>
+
+<joint name="wrist_roll_joint" type="continuous">
+  <origin xyz="0.013869 0.093891 -0.0053" rpy="0 0 0"/>
+  <parent link="Arm_02_1"/>
+  <child link="Arm_03_1"/>
+  <axis xyz="0.203218 0.979133 -0.0"/>
+</joint>
+
+</robot>

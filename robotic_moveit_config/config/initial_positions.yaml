@@ -1,0 +1,7 @@
+# Default initial positions for robotic's ros2_control fake system
+
+initial_positions:
+  base_to_waist_joint: 0
+  elbow_joint: 0
+  shoulder_joint: 0
+  wrist_roll_joint: 0

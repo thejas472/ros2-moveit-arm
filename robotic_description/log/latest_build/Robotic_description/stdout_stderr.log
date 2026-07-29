@@ -1,0 +1,49 @@
+running egg_info
+creating build/robotic_description/robotic_description.egg-info
+writing build/robotic_description/robotic_description.egg-info/PKG-INFO
+writing dependency_links to build/robotic_description/robotic_description.egg-info/dependency_links.txt
+writing entry points to build/robotic_description/robotic_description.egg-info/entry_points.txt
+writing requirements to build/robotic_description/robotic_description.egg-info/requires.txt
+writing top-level names to build/robotic_description/robotic_description.egg-info/top_level.txt
+writing manifest file 'build/robotic_description/robotic_description.egg-info/SOURCES.txt'
+reading manifest file 'build/robotic_description/robotic_description.egg-info/SOURCES.txt'
+writing manifest file 'build/robotic_description/robotic_description.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/thejaskm/robotic_description/build/robotic_description/build
+creating /home/thejaskm/robotic_description/build/robotic_description/build/lib
+creating /home/thejaskm/robotic_description/build/robotic_description/build/lib/robotic_description
+copying robotic_description/__init__.py -> /home/thejaskm/robotic_description/build/robotic_description/build/lib/robotic_description
+running install
+running install_lib
+creating /home/thejaskm/robotic_description/install/robotic_description/lib/python3.10/site-packages/robotic_description
+copying /home/thejaskm/robotic_description/build/robotic_description/build/lib/robotic_description/__init__.py -> /home/thejaskm/robotic_description/install/robotic_description/lib/python3.10/site-packages/robotic_description
+byte-compiling /home/thejaskm/robotic_description/install/robotic_description/lib/python3.10/site-packages/robotic_description/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/thejaskm/robotic_description/install/robotic_description/share/ament_index
+creating /home/thejaskm/robotic_description/install/robotic_description/share/ament_index/resource_index
+creating /home/thejaskm/robotic_description/install/robotic_description/share/ament_index/resource_index/packages
+copying resource/robotic_description -> /home/thejaskm/robotic_description/install/robotic_description/share/ament_index/resource_index/packages
+copying package.xml -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description
+creating /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/launch
+copying launch/display.launch.py -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/launch
+copying launch/gazebo.launch.py -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/launch
+creating /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/urdf
+copying urdf/Robotic.gazebo -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/urdf
+copying urdf/Robotic.xacro -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/urdf
+copying urdf/Robotic.ros2control -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/urdf
+copying urdf/materials.xacro -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/urdf
+creating /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/meshes
+copying meshes/Waist_1.stl -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/meshes
+copying meshes/base_link.stl -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/meshes
+copying meshes/Arm_02_1.stl -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/meshes
+copying meshes/Arm_03_1.stl -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/meshes
+copying meshes/Arm_01_1.stl -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/meshes
+creating /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/config
+copying config/ros_gz_bridge_gazebo.yaml -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/config
+copying config/display.rviz -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/config
+copying config/gazebo.rviz -> /home/thejaskm/robotic_description/install/robotic_description/share/robotic_description/config
+running install_egg_info
+Copying build/robotic_description/robotic_description.egg-info to /home/thejaskm/robotic_description/install/robotic_description/lib/python3.10/site-packages/robotic_description-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/thejaskm/robotic_description/build/robotic_description/install.log'
